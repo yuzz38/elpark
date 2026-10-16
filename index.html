@@ -1,0 +1,921 @@
+<title>Эль Парк Ангарск</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Студия флористики «Эль Парк» в Ангарске: букеты под заказ, комнатные растения, сухоцветы, декор и мастер-классы для взрослых и детей. Доставка по городу 300 ₽.">
+<meta name="theme-color" content="#2b2a3a">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Caveat:wght@500;700&family=Golos+Text:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: chalkboard-ink bands alternate with pale leaf-paper bands; Edison-bulb amber is the one warm accent; the studio's cement-tile floor is the recurring motif. */
+:root{
+  --ink:#2b2a3a;          /* logo ground, chalkboard */
+  --ink-2:#363548;
+  --chalk:#f3f1ec;        /* chalk white on ink */
+  --chalk-dim:rgba(243,241,236,.68);
+  --paper:#eef1e9;        /* pale leaf paper */
+  --paper-2:#e2e8db;
+  --leaf:#4f7a4a;         /* pothos green */
+  --leaf-soft:#a9c79a;
+  --bulb:#f0b65a;         /* edison amber */
+  --bulb-deep:#d9932c;
+  --rose:#e59aac;
+  --text:#2b2a3a;
+  --muted:#5d6060;
+  --line:rgba(43,42,58,.14);
+
+  --f-display:"Yeseva One", "Playfair Display", Georgia, "Times New Roman", serif;
+  --f-hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --f-body:"Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --wrap:1180px;
+  --radius:22px;
+  --header-h:68px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--bulb);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(72px,10vw,128px);position:relative}
+.band--ink{background:var(--ink);color:var(--chalk)}
+.band--paper{background:var(--paper);color:var(--text)}
+.band--paper2{background:var(--paper-2);color:var(--text)}
+section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
+
+/* chalk texture on ink */
+.band--ink::before,.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+   radial-gradient(1200px 500px at 15% 0%,rgba(255,255,255,.05),transparent 60%),
+   radial-gradient(900px 600px at 100% 100%,rgba(255,255,255,.04),transparent 60%)}
+
+.eyebrow{font-family:var(--f-hand);font-size:clamp(24px,2.6vw,30px);line-height:1;color:var(--leaf);display:inline-flex;align-items:center;gap:10px;margin-bottom:14px}
+.band--ink .eyebrow{color:var(--bulb)}
+.eyebrow svg{width:26px;height:26px;flex:none}
+.h2{font-size:clamp(34px,5.2vw,62px)}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:60ch}
+.band--ink .lead{color:var(--chalk-dim)}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(36px,5vw,60px);max-width:780px}
+.squig{display:inline-block;position:relative;white-space:nowrap}
+.squig svg{position:absolute;left:-2%;bottom:-.18em;width:104%;height:.38em;overflow:visible}
+.squig path{fill:none;stroke:var(--bulb);stroke-width:5;stroke-linecap:round}
+
+/* buttons */
+.btn{--bg:var(--bulb);--fg:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;background:var(--bg);color:var(--fg);font:600 16px/1 var(--f-body);text-decoration:none;border:0;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(240,182,90,.7)}
+.btn:active{transform:translateY(0)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn--ghost{--bg:transparent;--fg:currentColor;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn--ghost:hover{box-shadow:inset 0 0 0 1.5px currentColor;background:rgba(255,255,255,.06)}
+.btn--leaf{--bg:var(--leaf);--fg:#fff}
+.btn--leaf:hover{box-shadow:0 10px 30px -12px rgba(79,122,74,.8)}
+
+/* ===== header ===== */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(43,42,58,.92);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);color:var(--chalk);transition:box-shadow .3s}
+.header.is-scrolled{box-shadow:0 8px 30px -12px rgba(0,0,0,.45)}
+.header__in{height:var(--header-h);display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo__mark{width:44px;height:47px;background:url(assets/logo-white.png) center/contain no-repeat}
+.logo__txt{font-family:var(--f-hand);font-size:22px;line-height:1;font-weight:700}
+.logo__txt small{display:block;font-family:var(--f-body);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-top:3px}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{font-size:15px;text-decoration:none;opacity:.82;position:relative;padding:6px 0;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--bulb);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a:hover::after{transform:scaleX(1)}
+.header .btn{min-height:44px;padding:0 20px;font-size:15px}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:var(--chalk);cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}
+.burger span{position:absolute;left:13px;right:13px;height:2px;border-radius:2px;background:currentColor;transition:transform .35s,opacity .2s,top .35s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.menu-open .burger span:nth-child(1){top:22px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){top:22px;transform:rotate(-45deg)}
+.mnav{position:fixed;left:0;right:0;bottom:0;top:calc(var(--header-h) + env(safe-area-inset-top,0px));z-index:49;background:var(--ink);color:var(--chalk);
+  padding:28px max(24px,env(safe-area-inset-right,0px)) calc(28px + env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));
+  display:flex;flex-direction:column;gap:6px;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .3s,transform .3s,visibility 0s .3s}
+.menu-open .mnav{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .3s}
+.mnav a.mnav__link{font-family:var(--f-display);font-size:30px;text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center}
+.mnav a.mnav__link span{font-family:var(--f-hand);font-size:22px;color:var(--bulb)}
+.mnav__foot{margin-top:auto;padding-top:24px;display:grid;gap:12px}
+.mnav__foot .btn{width:100%}
+.mnav__note{font-size:14px;color:var(--chalk-dim);text-align:center}
+body.menu-open{overflow:hidden}
+
+/* ===== hero ===== */
+.hero{background:var(--ink);color:var(--chalk);position:relative;overflow:hidden;padding-block:clamp(40px,6vw,80px) clamp(64px,8vw,104px)}
+.bulbs{position:absolute;inset:0 0 auto;height:200px;pointer-events:none;z-index:0}
+.bulb{position:absolute;top:0;width:2px;background:rgba(243,241,236,.25);transform-origin:top center;animation:sway 6s ease-in-out infinite}
+.bulb::after{content:"";position:absolute;left:50%;bottom:-26px;width:22px;height:30px;margin-left:-11px;border-radius:50% 50% 46% 46%;background:radial-gradient(circle at 50% 60%,#fff6dc 0 18%,var(--bulb) 45%,rgba(240,182,90,.2) 75%);box-shadow:0 0 0 0 rgba(240,182,90,0);opacity:.25;animation:glow 1.4s ease forwards}
+.bulb:nth-child(1){left:6%;height:70px;animation-delay:-1s}.bulb:nth-child(1)::after{animation-delay:.2s}
+.bulb:nth-child(2){left:22%;height:40px;animation-delay:-3s}.bulb:nth-child(2)::after{animation-delay:.5s}
+.bulb:nth-child(3){left:58%;height:110px;animation-delay:-2s}.bulb:nth-child(3)::after{animation-delay:.8s}
+.bulb:nth-child(4){left:79%;height:56px;animation-delay:-4s}.bulb:nth-child(4)::after{animation-delay:1.1s}
+.bulb:nth-child(5){left:94%;height:92px;animation-delay:-5s}.bulb:nth-child(5)::after{animation-delay:1.4s}
+@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+@keyframes glow{to{opacity:1;box-shadow:0 0 40px 14px rgba(240,182,90,.35)}}
+.hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(70px,8vw,110px)}
+.hero__copy{min-width:0}
+.hero__chalk{list-style:none;margin:0 0 26px;padding:0;display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--f-hand);font-size:clamp(24px,2.4vw,30px);line-height:1.15;color:var(--chalk)}
+.hero__chalk li{display:flex;align-items:center;gap:8px}
+.hero__chalk svg{width:20px;height:20px;color:var(--leaf-soft);flex:none}
+.hero h1{font-size:clamp(42px,6.6vw,86px);line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--bulb)}
+.hero__sub{margin-top:24px;font-size:clamp(17px,1.7vw,20px);color:var(--chalk-dim);max-width:46ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 34px;margin-top:44px;padding-top:26px;border-top:1px dashed rgba(243,241,236,.25)}
+.fact b{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(26px,2.6vw,32px);line-height:1.1;color:var(--chalk);font-variant-numeric:tabular-nums}
+.fact span{font-size:14px;color:var(--chalk-dim)}
+.fact .stars{color:var(--bulb);letter-spacing:2px;font-size:14px}
+
+.hero__art{position:relative;min-width:0;aspect-ratio:1/1.08;max-width:560px;width:100%;justify-self:end}
+.arch{position:absolute;overflow:hidden;background:var(--ink-2)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch--big{left:14%;top:0;width:62%;height:84%;border-radius:999px 999px 26px 26px;box-shadow:0 30px 70px -30px rgba(0,0,0,.7)}
+.arch--small{right:0;bottom:4%;width:40%;aspect-ratio:1;border-radius:50%;border:6px solid var(--ink);box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.arch--tall{left:0;bottom:0;width:32%;height:46%;border-radius:999px;border:6px solid var(--ink)}
+.stamp{position:absolute;right:4%;top:6%;width:130px;height:130px;z-index:2;color:var(--ink)}
+.stamp__disc{position:absolute;inset:0;border-radius:50%;background:var(--bulb);display:grid;place-items:center;text-align:center;font-weight:700;line-height:1.05;box-shadow:0 10px 30px -8px rgba(240,182,90,.6)}
+.stamp__disc b{font-family:var(--f-display);font-weight:400;font-size:30px;display:block}
+.stamp__disc small{font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.stamp svg{position:absolute;inset:-12px;width:calc(100% + 24px);height:calc(100% + 24px);animation:spin 22s linear infinite}
+.stamp text{font:600 10.5px var(--f-body);letter-spacing:.24em;text-transform:uppercase;fill:var(--chalk)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hand-note{position:absolute;left:-2%;top:44%;z-index:2;font-family:var(--f-hand);font-size:24px;line-height:1.05;color:var(--chalk);transform:rotate(-8deg)}
+.hand-note svg{display:block;width:70px;height:40px;margin:4px 0 0 40px;color:var(--bulb)}
+
+/* marquee */
+.marquee{background:var(--leaf);color:#fff;overflow:hidden;padding-block:16px;border-block:1px solid rgba(0,0,0,.1)}
+.marquee__track{display:flex;width:max-content;animation:marq 32s linear infinite}
+.marquee__item{display:flex;align-items:center;gap:26px;padding-right:26px;font-family:var(--f-hand);font-size:clamp(26px,3vw,34px);line-height:1;white-space:nowrap}
+.marquee__item svg{width:22px;height:22px;color:var(--bulb)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ===== about ===== */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,90px);align-items:center}
+.about__photo{position:relative;min-width:0}
+.about__photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
+.about__photo figcaption{position:absolute;right:-14px;bottom:28px;background:var(--paper);padding:14px 18px;border-radius:14px;font-family:var(--f-hand);font-size:24px;line-height:1.1;max-width:220px;box-shadow:0 18px 40px -20px rgba(43,42,58,.45);transform:rotate(-3deg)}
+.about__text{min-width:0;display:grid;gap:20px}
+.about__text p{color:var(--muted);max-width:58ch}
+.about__quote{font-family:var(--f-display);font-size:clamp(24px,2.6vw,32px);line-height:1.25;color:var(--text);padding-left:22px;border-left:3px solid var(--leaf)}
+.sign{font-family:var(--f-hand);font-size:28px;color:var(--leaf);line-height:1}
+
+/* ===== assortment ===== */
+.assort{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.ac{grid-column:span 2;background:var(--paper);border-radius:var(--radius);padding:28px 26px 30px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;transition:transform .35s ease,background .35s}
+.ac:nth-child(4),.ac:nth-child(5){grid-column:span 3}
+.ac:hover{transform:translateY(-4px);background:#fff}
+.ac__ico{width:56px;height:56px;border-radius:16px;background:var(--paper-2);display:grid;place-items:center;color:var(--leaf)}
+.ac__ico svg{width:32px;height:32px}
+.ac h3{font-size:26px}
+.ac p{color:var(--muted);font-size:16px}
+.ac__tag{margin-top:auto;padding-top:8px;font-family:var(--f-hand);font-size:22px;color:var(--leaf)}
+.ac--feature{background:var(--ink);color:var(--chalk)}
+.ac--feature:hover{background:var(--ink-2)}
+.ac--feature p{color:var(--chalk-dim)}
+.ac--feature .ac__ico{background:rgba(255,255,255,.08);color:var(--bulb)}
+.ac--feature .ac__tag{color:var(--bulb)}
+
+/* ===== workshops ===== */
+.mk{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,4vw,56px);align-items:start}
+.mk__tabs{display:flex;flex-direction:column;gap:4px}
+.mk__tab{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;color:var(--chalk-dim);transition:background .25s,color .25s;-webkit-tap-highlight-color:transparent}
+.mk__tab:hover{background:rgba(255,255,255,.05);color:var(--chalk)}
+.mk__tab:focus-visible{outline:2px solid var(--bulb)}
+.mk__tab[aria-selected="true"]{background:rgba(255,255,255,.08);color:var(--chalk)}
+.mk__tab-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.06);color:var(--leaf-soft)}
+.mk__tab[aria-selected="true"] .mk__tab-ico{background:var(--bulb);color:var(--ink)}
+.mk__tab-ico svg{width:24px;height:24px}
+.mk__tab-name{font-family:var(--f-display);font-size:clamp(20px,2vw,24px);line-height:1.15}
+.mk__tab-who{font-size:13px;opacity:.7;white-space:nowrap}
+.mk__panel{position:relative;background:var(--ink-2);border-radius:28px;overflow:hidden;min-width:0}
+.mk__img{position:relative;aspect-ratio:4/3.1;overflow:hidden}
+.mk__img img{width:100%;height:100%;object-fit:cover;transition:opacity .45s ease,transform 1.2s ease}
+.mk__img img.is-swap{opacity:0;transform:scale(1.04)}
+.mk__badge{position:absolute;left:18px;top:18px;background:rgba(43,42,58,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--chalk)}
+.mk__body{padding:28px clamp(22px,3vw,36px) 32px;display:grid;gap:14px}
+.mk__body h3{font-size:clamp(28px,3vw,36px)}
+.mk__body p{color:var(--chalk-dim)}
+.mk__list{list-style:none;margin:2px 0 6px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.mk__list li{font-size:14px;padding:7px 13px;border-radius:999px;border:1px solid rgba(243,241,236,.2);color:var(--chalk)}
+.mk__body .btn{justify-self:start}
+
+/* ===== courses ===== */
+.courses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.course{position:relative;border-radius:28px;padding:clamp(28px,4vw,46px);min-height:360px;display:flex;flex-direction:column;gap:16px;overflow:hidden;isolation:isolate}
+.course--candle{background:var(--ink);color:var(--chalk)}
+.course--flor{background:var(--leaf);color:#fff}
+.course__art{position:absolute;right:-10px;bottom:-10px;width:min(46%,240px);height:auto;z-index:-1;opacity:.95}
+.course h3{font-size:clamp(34px,4vw,48px)}
+.course p{max-width:34ch;opacity:.82}
+.course__pts{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:8px;max-width:30ch}
+.course__pts li{display:flex;gap:10px;align-items:baseline;font-size:16px}
+.course__pts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bulb);flex:none;transform:translateY(-2px)}
+.course .btn{margin-top:auto;align-self:flex-start}
+.course--flor .btn{--bg:#fff;--fg:var(--leaf)}
+.course--candle .eyebrow{color:var(--bulb)}
+.flame{transform-origin:50% 100%;animation:flick 2.4s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.06,.94) rotate(2deg)}}
+
+/* ===== event / video ===== */
+.event{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,6vw,90px);align-items:center}
+.event__copy{display:grid;gap:22px}
+.event__date{display:inline-flex;align-items:center;gap:14px;font-family:var(--f-hand);font-size:28px;color:var(--rose)}
+.event__date i{font-style:normal;font-family:var(--f-display);font-size:58px;line-height:1;color:var(--chalk)}
+.event__copy h2 em{font-style:normal;color:var(--rose)}
+.event__copy > p{color:var(--chalk-dim);max-width:54ch}
+.event__steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.event__steps li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);font-size:15px;line-height:1.4}
+.event__steps svg{width:22px;height:22px;flex:none;color:var(--bulb);margin-top:1px}
+.event__collab{font-size:15px;color:var(--chalk-dim)}
+.event__collab a{color:var(--chalk);text-decoration-color:var(--bulb);text-underline-offset:4px}
+.phone{position:relative;justify-self:center;width:min(100%,340px);aspect-ratio:9/16;border-radius:38px;padding:10px;background:#1c1b27;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 40px 80px -30px rgba(0,0,0,.8),0 0 120px -30px rgba(229,154,172,.35)}
+.phone video{width:100%;height:100%;object-fit:cover;border-radius:30px;background:#111}
+.phone__play{position:absolute;inset:10px;border-radius:30px;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(20,19,30,.75));display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:12px;padding-bottom:34px;color:#fff;font:600 15px var(--f-body);-webkit-tap-highlight-color:transparent;transition:opacity .3s}
+.phone__play span.pp{width:76px;height:76px;border-radius:50%;background:var(--bulb);color:var(--ink);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(240,182,90,.6);animation:pulse 2.2s infinite}
+.phone__play span.pp svg{width:30px;height:30px;margin-left:4px}
+.phone.is-playing .phone__play{opacity:0;pointer-events:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(240,182,90,.55)}70%{box-shadow:0 0 0 22px rgba(240,182,90,0)}100%{box-shadow:0 0 0 0 rgba(240,182,90,0)}}
+.phone__sticker{position:absolute;left:-34px;top:12%;background:var(--rose);color:var(--ink);font-family:var(--f-hand);font-size:24px;line-height:1;padding:10px 16px;border-radius:12px;transform:rotate(-7deg);box-shadow:0 12px 30px -12px rgba(0,0,0,.5);z-index:2}
+
+/* ===== gallery ===== */
+.tilebg{background-color:var(--paper-2);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%232b2a3a' stroke-opacity='.07' stroke-width='1.4'%3E%3Crect x='.7' y='.7' width='86.6' height='86.6'/%3E%3Cpath d='M44 6 L82 44 L44 82 L6 44Z'/%3E%3Ccircle cx='44' cy='44' r='13'/%3E%3Cpath d='M44 31 C50 38 50 50 44 57 C38 50 38 38 44 31Z M31 44 C38 38 50 38 57 44 C50 50 38 50 31 44Z'/%3E%3Cpath d='M0 0 Q14 14 0 28 M88 0 Q74 14 88 28 M0 88 Q14 74 0 60 M88 88 Q74 74 88 60'/%3E%3C/g%3E%3C/svg%3E")}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(110px,13vw,170px);gap:14px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:18px;background:var(--paper)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.gallery figure:hover img{transform:scale(1.05)}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(243,241,236,.92);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.g1{grid-column:1/6;grid-row:span 3}
+.g2{grid-column:6/9;grid-row:span 2}
+.g3{grid-column:9/13;grid-row:span 2}
+.g4{grid-column:6/10;grid-row:span 2}
+.g5{grid-column:10/13;grid-row:span 2}
+.g6{grid-column:1/6;grid-row:span 1;background:var(--ink)!important;display:flex;align-items:center;justify-content:center;padding:18px}
+.g6 p{font-family:var(--f-hand);font-size:clamp(24px,2.4vw,32px);line-height:1.1;color:var(--chalk);text-align:center}
+.g6 p a{color:var(--bulb)}
+
+/* ===== reviews ===== */
+.rv-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(30px,4vw,48px)}
+.rv-score{display:flex;align-items:center;gap:18px}
+.rv-score b{font-family:var(--f-display);font-weight:400;font-size:clamp(56px,7vw,84px);line-height:.9;color:var(--bulb)}
+.rv-score div{font-size:15px;color:var(--chalk-dim);line-height:1.4}
+.rv-score .stars{color:var(--bulb);font-size:18px;letter-spacing:3px}
+.slider{position:relative}
+.slider__track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 2px 8px;margin:0 -2px;overscroll-behavior-x:contain}
+.slider__track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start;background:var(--ink-2);border-radius:22px;padding:28px 26px;display:flex;flex-direction:column;gap:16px;min-width:0;position:relative}
+.rv::before{content:"“";position:absolute;right:22px;top:6px;font-family:var(--f-display);font-size:90px;line-height:1;color:rgba(240,182,90,.18)}
+.rv .stars{color:var(--bulb);letter-spacing:2px;font-size:15px}
+.rv p{font-size:16px;line-height:1.55;color:var(--chalk)}
+.rv__who{margin-top:auto;display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
+.rv__ava{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--ink);flex:none}
+.rv__who b{display:block;font-weight:600;font-size:15px}
+.rv__who span{font-size:13px;color:var(--chalk-dim)}
+.rv__tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--leaf-soft)}
+.slider__nav{display:flex;align-items:center;gap:14px;margin-top:26px}
+.slider__btn{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(243,241,236,.3);background:transparent;color:var(--chalk);cursor:pointer;display:grid;place-items:center;transition:background .2s,border-color .2s,opacity .2s;-webkit-tap-highlight-color:transparent}
+.slider__btn:hover{background:var(--bulb);border-color:var(--bulb);color:var(--ink)}
+.slider__btn:disabled{opacity:.3;pointer-events:none}
+.slider__btn svg{width:22px;height:22px}
+.slider__dots{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.slider__dots button{width:8px;height:8px;border-radius:999px;border:0;padding:0;background:rgba(243,241,236,.25);cursor:pointer;transition:width .3s,background .3s}
+.slider__dots button[aria-current="true"]{width:26px;background:var(--bulb)}
+
+/* ===== how to book ===== */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:st}
+.step{background:var(--paper);border-radius:var(--radius);padding:30px 26px;display:grid;gap:12px;align-content:start;position:relative}
+.step__n{font-family:var(--f-display);font-size:64px;line-height:.9;color:var(--leaf)}
+.step h3{font-size:24px}
+.step p{color:var(--muted);font-size:16px}
+.book{margin-top:22px;border-radius:28px;background:var(--ink);color:var(--chalk);padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:center;position:relative;overflow:hidden}
+.book h3{font-size:clamp(28px,3.4vw,42px)}
+.book p{color:var(--chalk-dim);margin-top:10px;max-width:52ch}
+.book__btns{display:flex;flex-wrap:wrap;gap:12px}
+.book__leaf{position:absolute;right:-30px;top:-40px;width:200px;opacity:.08;color:var(--chalk);pointer-events:none}
+
+/* ===== contacts ===== */
+.contacts{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:20px;align-items:stretch}
+.cinfo{background:var(--ink);color:var(--chalk);border-radius:28px;padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:24px}
+.cinfo h2{font-size:clamp(34px,4vw,48px)}
+.crow{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.crow__ico{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.07);display:grid;place-items:center;color:var(--bulb)}
+.crow__ico svg{width:22px;height:22px}
+.crow small{display:block;font-size:13px;color:var(--chalk-dim);letter-spacing:.04em}
+.crow b{font-weight:500;font-size:17px;line-height:1.4}
+.crow a{text-decoration-color:rgba(240,182,90,.6);text-underline-offset:4px}
+.cinfo__btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.map{position:relative;border-radius:28px;overflow:hidden;min-height:440px;background:var(--paper-2)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
+.map__fallback{position:absolute;inset:0;display:block;text-decoration:none;color:var(--ink)}
+.map__fallback svg{width:100%;height:100%;display:block}
+.map__card{position:absolute;left:18px;right:18px;bottom:18px;background:var(--paper);border-radius:18px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 20px 40px -20px rgba(43,42,58,.5);flex-wrap:wrap}
+.map__card b{font-weight:600}
+.map__card span{font-size:14px;color:var(--muted);display:block}
+.map__links{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;background:var(--ink);color:var(--chalk);font-size:14px;font-weight:600;text-decoration:none}
+.chip--light{background:var(--paper-2);color:var(--ink)}
+
+/* ===== footer ===== */
+.footer{background:var(--ink);color:var(--chalk-dim);padding-block:44px calc(44px + env(safe-area-inset-bottom,0px));font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+.footer__in{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+.footer .logo{color:var(--chalk)}
+.footer__links{display:flex;gap:22px;flex-wrap:wrap}
+.footer a{text-decoration:none}
+.footer a:hover{color:var(--chalk)}
+
+/* mobile sticky CTA */
+.mcta{display:none}
+
+/* reveal */
+.rv-in{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}
+.js .rv-in.is-pending{opacity:.001;transform:translateY(26px)}
+
+/* ===== responsive ===== */
+@media (max-width:1020px){
+  .nav,.header__cta{display:none}
+  .burger{display:block}
+  .hero__grid{grid-template-columns:1fr}
+  .hero__art{justify-self:center;max-width:520px}
+  .about{grid-template-columns:1fr}
+  .about__photo{max-width:560px}
+  .mk{grid-template-columns:1fr}
+  .mk__tabs{flex-direction:row;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:8px;margin:0 calc(-1 * max(20px,env(safe-area-inset-left,0px)));padding:0 max(20px,env(safe-area-inset-left,0px)) 4px}
+  .mk__tabs::-webkit-scrollbar{display:none}
+  .mk__tab{flex:none;grid-template-columns:36px auto;padding:10px 16px 10px 10px;border-radius:999px;background:rgba(255,255,255,.05);scroll-snap-align:start}
+  .mk__tab-ico{width:36px;height:36px;border-radius:50%}
+  .mk__tab-ico svg{width:20px;height:20px}
+  .mk__tab-name{font-family:var(--f-body);font-size:15px;font-weight:600;white-space:nowrap}
+  .mk__tab-who{display:none}
+  .event{grid-template-columns:1fr}
+  .phone{order:-1}
+  .rv{flex-basis:calc((100% - 18px)/2)}
+  .contacts{grid-template-columns:1fr}
+  .assort{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ac,.ac:nth-child(4),.ac:nth-child(5){grid-column:auto}
+  .ac:nth-child(5){grid-column:1/-1}
+}
+@media (max-width:720px){
+  body{font-size:16px;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  :root{--header-h:62px}
+  .logo__mark{width:38px;height:41px}
+  .facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 14px}
+  .fact span{font-size:12.5px;line-height:1.3;display:block}
+  .hero__cta .btn{flex:1 1 100%}
+  .stamp{width:100px;height:100px}.stamp__disc b{font-size:24px}.stamp__disc small{font-size:9.5px}
+  .hand-note{font-size:20px;left:-1%}
+  .about__photo figcaption{right:10px;font-size:20px}
+  .courses{grid-template-columns:1fr}
+  .about__photo img{aspect-ratio:1/1.05}
+  .course{min-height:0;padding-bottom:180px}
+  .course__art{width:170px}
+  .event__steps{grid-template-columns:1fr}
+  .phone{width:min(100%,300px)}
+  .phone__sticker{left:-8px;font-size:20px}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;gap:10px}
+  .g1{grid-column:1/-1;grid-row:span 2}
+  .g2,.g3,.g4,.g5{grid-column:auto;grid-row:span 2}
+  .g6{grid-column:1/-1;grid-row:span 1}
+  .rv{flex-basis:88%}
+  .slider__btn{width:46px;height:46px}
+  .steps{grid-template-columns:1fr}
+  .book{grid-template-columns:1fr}
+  .book__btns .btn{flex:1 1 100%}
+  .map{min-height:380px}
+  .assort{grid-template-columns:1fr}
+  .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:8px;background:rgba(43,42,58,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+    padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));transform:translateY(110%);transition:transform .35s ease}
+  .mcta.is-on{transform:none}
+  .mcta .btn{flex:1;min-height:50px;padding:0 12px;font-size:15px}
+  .menu-open .mcta{transform:translateY(110%)}
+}
+@media (max-width:380px){
+  .hero h1{font-size:38px}
+  .fact b{font-size:22px}
+  .mnav a.mnav__link{font-size:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .marquee__track{animation:none}
+}
+</style>
+
+<!-- svg sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19 13 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-max" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 14.5V9.5l4 3.5 4-3.5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="var(--ink)" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="17.5" r="1.8" fill="var(--ink)" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- assortment -->
+    <symbol id="a-bouquet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="9" r="4"/><circle cx="20" cy="7" r="3.5"/><circle cx="22" cy="14" r="3.2"/><circle cx="13" cy="15.5" r="3"/><path d="M11 13l4 9M20 10.5l-3 11.5M22 17.2l-5 4.8M13 18.5l3 3.5"/><path d="M10.5 21h11l-3 8h-5z"/></g></symbol>
+    <symbol id="a-pot" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19h14l-2 10H11z"/><path d="M16 19V9"/><path d="M16 13c-4 0-7-2-8-6 4 0 7 2 8 6zM16 11c3-.5 6-3 6.5-7-4 .5-6 3-6.5 7z"/><path d="M16 16c2.5 0 5-1 6-3.5"/></g></symbol>
+    <symbol id="a-dry" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29V6M11 29c0-8 2-14 5-18M21 29c0-8-2-14-5-18"/><path d="M16 6l-2-3M16 6l2-3M16 10l-3-2M16 10l3-2M16 14l-3-2M16 14l3-2M13.5 12l-3.5-1M18.5 12l3.5-1"/></g></symbol>
+    <symbol id="a-stab" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 28h14M10 28V12a6 6 0 0 1 12 0v16"/><circle cx="16" cy="15" r="3"/><path d="M16 12c1.5-1 3-.5 3 1M16 18v7M14 22c-1.5-.5-2.5-1.5-2.5-3 1.5 0 2.5 1 2.5 3z"/></g></symbol>
+    <symbol id="a-decor" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3v6M10 9h12l-2 3H12z"/><path d="M11 12c-4 3-5 8-3 12h16c2-4 1-9-3-12"/><path d="M8 24c3 3 13 3 16 0"/><path d="M12.5 17.5l-1 2M16 16v3M19.5 17.5l1 2"/></g></symbol>
+    <!-- workshops -->
+    <symbol id="w-one" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.2"/><path d="M5.5 20c.8-4 3.4-6 6.5-6s5.7 2 6.5 6"/></g></symbol>
+    <symbol id="w-season" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M12 7 9 4.5M12 7l3-2.5M12 11.5 8 9M12 11.5l4-2.5M12 16l-5-3M12 16l5-3"/></g></symbol>
+    <symbol id="w-kids" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.3 4.7 5.2.8-3.8 3.6.9 5.1L12 15.3l-4.6 2.4.9-5.1L4.5 9l5.2-.8z"/></g></symbol>
+    <symbol id="w-mosaic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7l-3 7h-4zM4 13h5l2 7H4zM13 13h7v7h-9z"/></g></symbol>
+    <symbol id="w-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="2.6"/><circle cx="16" cy="8" r="2.6"/><path d="M3 19c.5-3 2.5-5 5-5s4.5 2 5 5M11 19c.5-3 2.5-5 5-5s4.5 2 5 5"/></g></symbol>
+    <symbol id="w-bday" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16v-7H4zM4 15.5c2 1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 4 0"/><path d="M8 13V9.5M12 13V9.5M16 13V9.5"/><path d="M8 7c-.8-.8-.8-2 0-3 .8 1 .8 2.2 0 3zM12 7c-.8-.8-.8-2 0-3 .8 1 .8 2.2 0 3zM16 7c-.8-.8-.8-2 0-3 .8 1 .8 2.2 0 3z"/></g></symbol>
+    <symbol id="i-squig" viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M2 8 C 30 2, 50 12, 80 6 S 140 2, 198 7"/></symbol>
+  </defs>
+</svg>
+
+<header class="header" id="top">
+  <div class="wrap header__in">
+    <a class="logo" href="#top" aria-label="Эль Парк, на главную">
+      <span class="logo__mark" role="img" aria-label="Логотип Эль Парк"></span>
+      <span class="logo__txt">Эль Парк<small>студия флористики</small></span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#about">О студии</a>
+      <a href="#assortment">Цветы и декор</a>
+      <a href="#workshops">Мастер-классы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn header__cta" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Написать в MAX</a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" aria-label="Мобильное меню">
+  <a class="mnav__link" href="#about">О студии <span>душа</span></a>
+  <a class="mnav__link" href="#assortment">Цветы и декор <span>букеты</span></a>
+  <a class="mnav__link" href="#workshops">Мастер-классы <span>6 форматов</span></a>
+  <a class="mnav__link" href="#courses">Курсы <span>для взрослых</span></a>
+  <a class="mnav__link" href="#reviews">Отзывы <span>5,0</span></a>
+  <a class="mnav__link" href="#contacts">Контакты <span>212 кв-л</span></a>
+  <div class="mnav__foot">
+    <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Заказать букет в MAX</a>
+    <a class="btn btn--ghost" href="https://www.instagram.com/elpark.angarsk/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>elpark.angarsk</a>
+    <p class="mnav__note">На связи каждый день с 10:00 до 20:00</p>
+  </div>
+</nav>
+
+<main>
+<!-- 1. HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="bulbs" aria-hidden="true"><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i></div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <ul class="hero__chalk">
+        <li><svg><use href="#i-leaf"/></svg>Цветы для любимых</li>
+        <li><svg><use href="#i-leaf"/></svg>Декор для дома</li>
+        <li><svg><use href="#i-leaf"/></svg>Творчество для души</li>
+      </ul>
+      <h1 id="hero-title">Здесь красоту создают <em>и&nbsp;учат</em> ей</h1>
+      <p class="hero__sub">Студия флористики в Ангарске. Собираем букеты под заказ, держим живые растения и сухоцветы, а по выходным превращаем зал в мастерскую.</p>
+      <div class="hero__cta">
+        <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Заказать букет</a>
+        <a class="btn btn--ghost" href="#workshops">Выбрать мастер-класс<svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>300 ₽</b><span>доставка по&nbsp;Ангарску</span></div>
+        <div class="fact"><b>10–20</b><span>на связи каждый день</span></div>
+        <div class="fact"><b>5,0</b><span><span class="stars">★★★★★</span><br>30+ отзывов</span></div>
+      </div>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <div class="arch arch--big"><img src="assets/mk-winter.jpg" alt="" fetchpriority="high"></div>
+      <div class="arch arch--tall"><img src="assets/event-decor.jpg" alt=""></div>
+      <div class="arch arch--small"><img src="assets/mk-individual.jpg" alt=""></div>
+      <div class="stamp">
+        <svg viewBox="0 0 160 160"><defs><path id="circ" d="M80 80m-66 0a66 66 0 1 1 132 0a66 66 0 1 1-132 0"/></defs><text><textPath href="#circ">мастер-классы · букеты · декор · ангарск ·</textPath></text></svg>
+        <div class="stamp__disc"><div><b>EL</b><small>park</small></div></div>
+      </div>
+      <div class="hand-note">приходите<br>творить!
+        <svg viewBox="0 0 70 40"><path d="M4 6c18 2 36 10 52 26M56 32l-1-12M56 32l-12-1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__item">букеты под заказ <svg><use href="#i-leaf"/></svg> флорариумы <svg><use href="#i-leaf"/></svg> свечеварение <svg><use href="#i-leaf"/></svg> мозаика <svg><use href="#i-leaf"/></svg> сухоцветы <svg><use href="#i-leaf"/></svg> детские праздники <svg><use href="#i-leaf"/></svg> девичники <svg><use href="#i-leaf"/></svg></div>
+    <div class="marquee__item">букеты под заказ <svg><use href="#i-leaf"/></svg> флорариумы <svg><use href="#i-leaf"/></svg> свечеварение <svg><use href="#i-leaf"/></svg> мозаика <svg><use href="#i-leaf"/></svg> сухоцветы <svg><use href="#i-leaf"/></svg> детские праздники <svg><use href="#i-leaf"/></svg> девичники <svg><use href="#i-leaf"/></svg></div>
+  </div>
+</div>
+
+<!-- 2. ABOUT -->
+<section class="band band--paper" id="about" aria-labelledby="about-title">
+  <div class="wrap about">
+    <figure class="about__photo rv-in" style="margin:0">
+      <img src="assets/mk-florarium.jpg" alt="Мастер-класс по флорариумам в студии Эль Парк" loading="lazy" width="915" height="1220">
+      <figcaption>учим собирать флорариум с нуля</figcaption>
+    </figure>
+    <div class="about__text rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>о студии</span>
+      <h2 class="h2" id="about-title">Пространство, где красоте <span class="squig">учат<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 30 2, 50 12, 80 6 S 140 2, 198 7"/></svg></span></h2>
+      <p class="about__quote">«Умение создавать прекрасное своими руками делает жизнь глубже, теплее и осмысленнее».</p>
+      <p>Да, мы собираем букеты и композиции под заказ: индивидуально, с душой, в диалоге с каждым. Но настоящая любовь студии — мастер-классы. Сюда приходят за цветами, а уходят с новым навыком и вещью, сделанной своими руками.</p>
+      <p>Камерные встречи один на один, сезонные композиции, детские праздники, мозаика и выездные тимбилдинги. Каждый находит свой формат.</p>
+      <span class="sign">Давайте создавать красоту вместе</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ASSORTMENT -->
+<section class="band band--paper2" id="assortment" aria-labelledby="as-title">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>что есть в студии</span>
+      <h2 class="h2" id="as-title">Цветы, зелень и&nbsp;декор для дома</h2>
+      <p class="lead">Свежие цветы, растения в горшках и вещи, которые делают дом уютнее. Привезём по городу за 300&nbsp;₽.</p>
+    </div>
+    <div class="assort">
+      <article class="ac ac--feature rv-in">
+        <div class="ac__ico"><svg><use href="#a-bouquet"/></svg></div>
+        <h3>Букеты под заказ</h3>
+        <p>Соберём под повод, человека и бюджет. Расскажите, кому цветы, а флорист предложит варианты и пришлёт фото до доставки.</p>
+        <span class="ac__tag">от свидания до свадьбы</span>
+      </article>
+      <article class="ac rv-in">
+        <div class="ac__ico"><svg><use href="#a-pot"/></svg></div>
+        <h3>Комнатные растения</h3>
+        <p>Монстеры, сциндапсусы, суккуленты и всё, что вьётся под потолком нашей студии. Подскажем, как ухаживать.</p>
+        <span class="ac__tag">живая зелень</span>
+      </article>
+      <article class="ac rv-in">
+        <div class="ac__ico"><svg><use href="#a-dry"/></svg></div>
+        <h3>Сухоцветы</h3>
+        <p>Колосья, лагурус, лимониум. Букеты, которые стоят месяцами и не требуют воды.</p>
+        <span class="ac__tag">надолго</span>
+      </article>
+      <article class="ac rv-in">
+        <div class="ac__ico"><svg><use href="#a-stab"/></svg></div>
+        <h3>Стабилизированные цветы</h3>
+        <p>Настоящие розы и мох, которые сохраняют цвет и форму годами. Хороший подарок тому, кто не любит, когда цветы вянут.</p>
+        <span class="ac__tag">годами как живые</span>
+      </article>
+      <article class="ac rv-in">
+        <div class="ac__ico"><svg><use href="#a-decor"/></svg></div>
+        <h3>Декор для дома</h3>
+        <p>Кашпо, вазы, свечи, флорариумы и интерьерные мелочи. Можно собрать подарок целиком, с букетом и упаковкой.</p>
+        <span class="ac__tag">подарок под ключ</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WORKSHOPS -->
+<section class="band band--ink" id="workshops" aria-labelledby="mk-title">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>мастер-классы</span>
+      <h2 class="h2" id="mk-title">Шесть способов провести время <span class="squig">красиво<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 30 2, 50 12, 80 6 S 140 2, 198 7"/></svg></span></h2>
+      <p class="lead">Для взрослых и детей, в студии или у вас. Все материалы, инструменты и уютная атмосфера с нас.</p>
+    </div>
+    <div class="mk">
+      <div class="mk__tabs" role="tablist" aria-label="Форматы мастер-классов">
+        <button class="mk__tab" role="tab" aria-selected="true" data-i="0" id="t0" aria-controls="mk-panel"><span class="mk__tab-ico"><svg><use href="#w-one"/></svg></span><span class="mk__tab-name">Индивидуальный</span><span class="mk__tab-who">1 на 1</span></button>
+        <button class="mk__tab" role="tab" aria-selected="false" data-i="1" id="t1" aria-controls="mk-panel" tabindex="-1"><span class="mk__tab-ico"><svg><use href="#w-season"/></svg></span><span class="mk__tab-name">Сезонный</span><span class="mk__tab-who">группа</span></button>
+        <button class="mk__tab" role="tab" aria-selected="false" data-i="2" id="t2" aria-controls="mk-panel" tabindex="-1"><span class="mk__tab-ico"><svg><use href="#w-kids"/></svg></span><span class="mk__tab-name">Детский</span><span class="mk__tab-who">для детей</span></button>
+        <button class="mk__tab" role="tab" aria-selected="false" data-i="3" id="t3" aria-controls="mk-panel" tabindex="-1"><span class="mk__tab-ico"><svg><use href="#w-mosaic"/></svg></span><span class="mk__tab-name">Мозаика</span><span class="mk__tab-who">взрослые</span></button>
+        <button class="mk__tab" role="tab" aria-selected="false" data-i="4" id="t4" aria-controls="mk-panel" tabindex="-1"><span class="mk__tab-ico"><svg><use href="#w-team"/></svg></span><span class="mk__tab-name">Коллективный и выездной</span><span class="mk__tab-who">компании</span></button>
+        <button class="mk__tab" role="tab" aria-selected="false" data-i="5" id="t5" aria-controls="mk-panel" tabindex="-1"><span class="mk__tab-ico"><svg><use href="#w-bday"/></svg></span><span class="mk__tab-name">День рождения</span><span class="mk__tab-who">праздник</span></button>
+      </div>
+      <div class="mk__panel rv-in" id="mk-panel" role="tabpanel" aria-labelledby="t0" aria-live="polite">
+        <div class="mk__img"><img id="mk-img" src="assets/mk-individual.jpg" alt="" loading="lazy"><span class="mk__badge" id="mk-badge">только вы и флорист</span></div>
+        <div class="mk__body">
+          <h3 id="mk-h">Индивидуальный мастер-класс</h3>
+          <p id="mk-p">Тихая, камерная история: только вы, цветы и флорист. Без спешки и фона. Для тех, кто хочет разобраться в нюансах или просто провести время с собой в красивой обстановке.</p>
+          <ul class="mk__list" id="mk-l"><li>удобная вам дата</li><li>тема на выбор</li><li>подарочный сертификат</li></ul>
+          <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Записаться</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COURSES -->
+<section class="band band--paper" id="courses" aria-labelledby="c-title">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>курсы для взрослых</span>
+      <h2 class="h2" id="c-title">Когда одного вечера мало</h2>
+      <p class="lead">Несколько встреч, чтобы освоить ремесло по-настоящему: для себя, для подарков близким или для своего маленького дела.</p>
+    </div>
+    <div class="courses">
+      <article class="course course--candle rv-in">
+        <svg class="course__art" viewBox="0 0 200 220" aria-hidden="true">
+          <g class="flame"><path d="M100 22c14 18 18 30 10 44-4 7-16 7-20 0-8-14-4-26 10-44z" fill="#f0b65a"/><path d="M100 44c6 8 7 14 3 20-2 3-5 3-6 0-3-6-2-12 3-20z" fill="#fff6dc"/></g>
+          <path d="M100 68v14" stroke="#f3f1ec" stroke-width="3" stroke-linecap="round"/>
+          <rect x="62" y="82" width="76" height="120" rx="14" fill="#f3f1ec" opacity=".14"/>
+          <rect x="62" y="82" width="76" height="120" rx="14" fill="none" stroke="#f3f1ec" stroke-opacity=".5" stroke-width="2"/>
+          <path d="M62 104c14 8 24-6 38 2s24 4 38-2" fill="none" stroke="#f3f1ec" stroke-opacity=".5" stroke-width="2"/>
+        </svg>
+        <span class="eyebrow" style="margin:0">курс</span>
+        <h3>Свечеварение</h3>
+        <p>Соевый воск, ароматы, деревянные фитили и сухоцветы в отливке. Свечи, которые не стыдно дарить.</p>
+        <ul class="course__pts"><li>работа с воском и формами</li><li>подбор ароматов</li><li>декор и упаковка</li></ul>
+        <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener">Узнать даты<svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="course course--flor rv-in">
+        <svg class="course__art" viewBox="0 0 200 220" aria-hidden="true" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="78" cy="60" r="22"/><circle cx="78" cy="60" r="10"/><circle cx="126" cy="48" r="18"/><circle cx="126" cy="48" r="7"/><circle cx="136" cy="96" r="16"/><circle cx="92" cy="104" r="14"/>
+          <path d="M78 82l20 66M126 66l-18 82M136 112l-26 36M92 118l12 30"/>
+          <path d="M60 120c-14-4-22-16-20-30 14 2 22 14 20 30zM150 128c14-6 20-18 18-30-14 4-20 16-18 30z"/>
+          <path d="M80 146h48l-10 60H90z" fill="#fff" fill-opacity=".14"/>
+        </svg>
+        <span class="eyebrow" style="margin:0;color:#fff">курс</span>
+        <h3>Флористика</h3>
+        <p>От работы с цветком до готового букета: спираль, композиции в коробке, сезонные идеи и упаковка.</p>
+        <ul class="course__pts"><li>техника спирали</li><li>сочетание цвета и фактур</li><li>уход и свежесть цветов</li></ul>
+        <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener">Узнать даты<svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. EVENT / VIDEO -->
+<section class="band band--ink" id="events" aria-labelledby="ev-title">
+  <div class="wrap event">
+    <div class="event__copy rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>вечера в студии</span>
+      <div class="event__date"><i>11</i>октября · Международный день девочек</div>
+      <h2 class="h2" id="ev-title">Женщина женщине <em>дом</em></h2>
+      <p>Так проходят наши вечера для девушек. Вместе с творческой мастерской «Кладовка» мы собрали тёплую компанию, чтобы выдохнуть и наполниться. Смотрите, как это было, и приходите на следующий девичник.</p>
+      <ul class="event__steps">
+        <li><svg><use href="#i-check"/></svg>создали своими руками дофаминовое зеркало</li>
+        <li><svg><use href="#i-check"/></svg>собрали цветочную композицию</li>
+        <li><svg><use href="#i-check"/></svg>поговорили с психологом о женской силе</li>
+        <li><svg><use href="#i-check"/></svg>глинтвейн, закуски и фото на память</li>
+      </ul>
+      <p class="event__collab">Хотите такой вечер для своей компании? Соберём девичник под вас: <a href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener">напишите нам в MAX</a>.</p>
+    </div>
+    <div class="phone rv-in" id="phone">
+      <span class="phone__sticker">время для нас ❤</span>
+      <video id="vid" src="assets/devichnik.mp4" poster="assets/devichnik-poster.jpg" playsinline preload="metadata" controls></video>
+      <button class="phone__play" type="button" id="vplay" aria-label="Смотреть видео с девичника"><span class="pp"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg></span>Смотреть 40 секунд</button>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GALLERY -->
+<section class="band tilebg" id="gallery" aria-labelledby="g-title">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>живые кадры</span>
+      <h2 class="h2" id="g-title">Как у нас бывает</h2>
+    </div>
+    <div class="gallery">
+      <figure class="g1 rv-in"><img src="assets/mk-corporate.jpg" alt="Участницы коллективного мастер-класса с цветочными композициями" loading="lazy"><figcaption>Выездной мастер-класс к 8 Марта</figcaption></figure>
+      <figure class="g2 rv-in"><img src="assets/mk-kids.jpg" alt="Дети с готовыми флорариумами" loading="lazy"><figcaption>Детский флорариум</figcaption></figure>
+      <figure class="g3 rv-in"><img src="assets/mk-winter.jpg" alt="Новогодний мастер-класс с хвоей и свечами" loading="lazy"><figcaption>Зимние композиции</figcaption></figure>
+      <figure class="g4 rv-in"><img src="assets/mk-mosaic.jpg" alt="Плитка и заготовка для мозаики" loading="lazy"><figcaption>Мозаика</figcaption></figure>
+      <figure class="g5 rv-in"><img src="assets/event-decor.jpg" alt="Студия, украшенная к празднику" loading="lazy"><figcaption>Оформление праздника</figcaption></figure>
+      <figure class="g6 rv-in"><p>Больше работ каждый день в&nbsp;<a href="https://www.instagram.com/elpark.angarsk/" target="_blank" rel="noopener">@elpark.angarsk</a></p></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. REVIEWS -->
+<section class="band band--ink" id="reviews" aria-labelledby="rv-title">
+  <div class="wrap">
+    <div class="rv-head rv-in">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow"><svg><use href="#i-leaf"/></svg>отзывы гостей</span>
+        <h2 class="h2" id="rv-title">Что говорят о нас</h2>
+      </div>
+      <div class="rv-score"><b>5,0</b><div><span class="stars">★★★★★</span><br>более 30 отзывов<br>на картах 2ГИС</div></div>
+    </div>
+    <div class="slider" id="slider">
+      <div class="slider__track" id="track" tabindex="0" aria-label="Отзывы, листайте вбок"></div>
+      <div class="slider__nav">
+        <button class="slider__btn" type="button" id="prev" aria-label="Предыдущие отзывы"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="slider__btn" type="button" id="next" aria-label="Следующие отзывы"><svg><use href="#i-arrow"/></svg></button>
+        <div class="slider__dots" id="dots" aria-label="Навигация по отзывам"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. HOW TO BOOK -->
+<section class="band band--paper2" id="book" aria-labelledby="b-title">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow"><svg><use href="#i-leaf"/></svg>как заказать</span>
+      <h2 class="h2" id="b-title">Букет или место на мастер-классе за три шага</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv-in"><span class="step__n">1</span><h3>Напишите в MAX</h3><p>Расскажите, что нужно: букет к дате, подарок или запись на мастер-класс. Отвечаем с 10:00 до 20:00.</p></div>
+      <div class="step rv-in"><span class="step__n">2</span><h3>Согласуем детали</h3><p>Подберём цветы под бюджет и пришлём фото. Для мастер-класса выберем формат, дату и число гостей.</p></div>
+      <div class="step rv-in"><span class="step__n">3</span><h3>Встречаемся</h3><p>Привезём букет по Ангарску за 300&nbsp;₽ или ждём вас в студии на 212 квартале.</p></div>
+    </div>
+    <div class="book rv-in">
+      <svg class="book__leaf" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"/></svg>
+      <div><h3>Нужны цветы сегодня?</h3><p>Напишите нам, и флорист соберёт букет из того, что сейчас самое свежее в студии.</p></div>
+      <div class="book__btns">
+        <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Заказать букет</a>
+        <a class="btn btn--ghost" href="https://www.instagram.com/elpark.angarsk/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CONTACTS + MAP -->
+<section class="band band--paper" id="contacts" aria-labelledby="ct-title">
+  <div class="wrap contacts">
+    <div class="cinfo rv-in">
+      <span class="eyebrow" style="margin:0"><svg><use href="#i-leaf"/></svg>ждём в гости</span>
+      <h2 id="ct-title">Контакты</h2>
+      <div class="crow"><span class="crow__ico"><svg><use href="#i-pin"/></svg></span><div><small>Адрес</small><b>Ангарск, 212-й квартал, 7<br>1 этаж</b></div></div>
+      <div class="crow"><span class="crow__ico"><svg><use href="#i-clock"/></svg></span><div><small>На связи</small><b>Каждый день, 10:00–20:00</b></div></div>
+      <div class="crow"><span class="crow__ico"><svg><use href="#i-truck"/></svg></span><div><small>Доставка</small><b>По Ангарску — 300 ₽</b></div></div>
+      <div class="crow"><span class="crow__ico"><svg><use href="#i-insta"/></svg></span><div><small>Instagram</small><b><a href="https://www.instagram.com/elpark.angarsk/" target="_blank" rel="noopener">@elpark.angarsk</a></b></div></div>
+      <div class="cinfo__btns">
+        <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Написать в MAX</a>
+      </div>
+    </div>
+    <div class="map rv-in" id="map">
+      <a class="map__fallback" href="https://2gis.ru/angarsk/geo/1548748027099622" target="_blank" rel="noopener" aria-label="Открыть адрес студии в 2ГИС">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#e2e8db"/>
+          <g fill="#d3dccb"><rect x="30" y="30" width="150" height="110" rx="10"/><rect x="220" y="30" width="170" height="110" rx="10"/><rect x="430" y="30" width="150" height="110" rx="10"/><rect x="30" y="180" width="150" height="120" rx="10"/><rect x="430" y="180" width="150" height="120" rx="10"/><rect x="30" y="340" width="150" height="100" rx="10"/><rect x="220" y="340" width="170" height="100" rx="10"/><rect x="430" y="340" width="150" height="100" rx="10"/></g>
+          <rect x="220" y="180" width="170" height="120" rx="10" fill="#a9c79a" opacity=".7"/>
+          <g fill="none" stroke="#f3f1ec" stroke-width="16"><path d="M0 160H600M0 320H600M200 0V460M410 0V460"/></g>
+          <g fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8 8"><path d="M0 160H600M200 0V460"/></g>
+          <g transform="translate(305 205)"><circle r="46" fill="#f0b65a" opacity=".25"/><path d="M0 22s-22-19-22-36a22 22 0 0 1 44 0C22 3 0 22 0 22Z" fill="#2b2a3a"/><circle cy="-14" r="8" fill="#f0b65a"/></g>
+        </svg>
+      </a>
+      <div class="map__card">
+        <div><b>Эль Парк, 212-й квартал, 7</b><span>Ангарск, 1 этаж</span></div>
+        <div class="map__links">
+          <a class="chip" href="https://2gis.ru/angarsk/geo/1548748027099622" target="_blank" rel="noopener">2ГИС</a>
+          <a class="chip chip--light" href="https://yandex.ru/maps/?text=%D0%90%D0%BD%D0%B3%D0%B0%D1%80%D1%81%D0%BA%2C%20212-%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%207" target="_blank" rel="noopener">Яндекс Карты</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <a class="logo" href="#top"><span class="logo__mark" role="img" aria-label="Логотип Эль Парк"></span><span class="logo__txt">Эль Парк<small>студия флористики · Ангарск</small></span></a>
+    <div class="footer__links">
+      <a href="#workshops">Мастер-классы</a>
+      <a href="#assortment">Цветы и декор</a>
+      <a href="https://www.instagram.com/elpark.angarsk/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener">MAX</a>
+    </div>
+    <span>© <span id="y">2026</span> Эль Парк</span>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta">
+  <a class="btn" href="https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA" target="_blank" rel="noopener"><svg><use href="#i-max"/></svg>Букет</a>
+  <a class="btn btn--leaf" href="#workshops">Мастер-класс</a>
+</div>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement; root.classList.add('js');
+  var MAX='https://max.ru/join/Svr0vdckEOYtBYTMHheFVtV83lmIvBF3jsVnNP3qQlA';
+
+  /* header + mobile CTA on scroll */
+  var header=d.querySelector('.header'), mcta=d.getElementById('mcta');
+  function onScroll(){var y=window.pageYOffset||root.scrollTop;header.classList.toggle('is-scrolled',y>10);mcta.classList.toggle('is-on',y>520)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* burger */
+  var burger=d.querySelector('.burger'), body=d.body;
+  function setMenu(open){body.classList.toggle('menu-open',open);burger.setAttribute('aria-expanded',open?'true':'false');burger.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню')}
+  burger.addEventListener('click',function(){setMenu(!body.classList.contains('menu-open'))});
+  d.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  window.addEventListener('resize',function(){if(window.innerWidth>1020)setMenu(false)});
+
+  /* workshops tabs */
+  var MK=[
+    {img:'mk-individual.jpg',badge:'только вы и флорист',h:'Индивидуальный мастер-класс',p:'Тихая, камерная история: только вы, цветы и флорист. Без спешки и фона. Для тех, кто хочет разобраться в нюансах или просто провести время с собой в красивой обстановке.',l:['удобная вам дата','тема на выбор','подарочный сертификат']},
+    {img:'mk-winter.jpg',badge:'осень · зима · весна',h:'Сезонные мастер-классы',p:'Ловим дыхание каждого времени года через текстуры и ароматы. Осенние букеты с колосьями, зимние композиции с хвоей и шишками, весенняя нежность с молодой зеленью.',l:['хвоя и шишки','колосья и сухоцветы','весенние первоцветы']},
+    {img:'mk-kids.jpg',badge:'ребёнок уходит волшебником',h:'Детские мастер-классы',p:'Настоящее приключение в мире природы. Не боимся испачкать руки землёй, смешно перепутать названия цветов и создать что-то очень искреннее. Ребёнок уходит с ощущением, что он настоящий волшебник.',l:['флорариумы','мини-букеты','детские праздники']},
+    {img:'mk-mosaic.jpg',badge:'медитативно и необычно',h:'Мастер-классы по мозаике',p:'Отдельная магия: из невыразительных кусочков плитки создаём настоящие произведения искусства. Необычный, медитативный мастер-класс для самых творческих.',l:['подставки и панно','вся плитка и инструменты','без опыта']},
+    {img:'mk-corporate.jpg',badge:'в студии или у вас',h:'Коллективные и выездные',p:'Когда хочется разделить радость творчества с друзьями, коллегами или близкими. Тёплая атмосфера, общение, смех и композиция, которую каждый унесёт с собой. Идеально для тимбилдинга.',l:['тимбилдинг','8 Марта и Новый год','приезжаем к вам']},
+    {img:'event-decor.jpg',badge:'вместо обычного застолья',h:'Мастер-класс на день рождения',p:'Ароматный праздник творчества вместо стандартного застолья. Гости уходят не с кусочком торта, а с авторской композицией, созданной своими руками. Оформим студию под именинника.',l:['для детей и взрослых','оформление зала','фото на память']}
+  ];
+  var tabs=[].slice.call(d.querySelectorAll('.mk__tab')), img=d.getElementById('mk-img'), panel=d.getElementById('mk-panel');
+  MK.forEach(function(m){var i=new Image();i.src='assets/'+m.img});
+  function selectTab(i,focus){
+    tabs.forEach(function(t,j){var on=i===j;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1});
+    var m=MK[i];panel.setAttribute('aria-labelledby','t'+i);
+    img.classList.add('is-swap');
+    setTimeout(function(){img.src='assets/'+m.img;img.classList.remove('is-swap')},220);
+    d.getElementById('mk-badge').textContent=m.badge;
+    d.getElementById('mk-h').textContent=m.h;
+    d.getElementById('mk-p').textContent=m.p;
+    d.getElementById('mk-l').innerHTML=m.l.map(function(x){return '<li>'+x+'</li>'}).join('');
+    if(focus){tabs[i].focus();}
+    if(tabs[i].scrollIntoView && window.innerWidth<=1020){var bar=tabs[i].parentNode;bar.scrollTo({left:tabs[i].offsetLeft-20,behavior:'smooth'})}
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(i)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key, n=null;
+      if(k==='ArrowDown'||k==='ArrowRight')n=(i+1)%tabs.length;
+      if(k==='ArrowUp'||k==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;
+      if(n!==null){e.preventDefault();selectTab(n,true)}
+    });
+  });
+
+  /* reviews */
+  var R=[
+    ['Надя Семейкина','март 2025','мастер-класс','Огромное спасибо за потрясающий мастер-класс по созданию флорариума! Атмосфера уютная и лёгкая, Екатерина объяснила все тонкости и помогла каждому создать свой маленький шедевр. Однозначно рекомендую для мероприятий!'],
+    ['Марина MD','ноябрь 2024','букеты','Лучший магазин цветов в Ангарске! Всегда свежие цветы, много интерьерных аксессуаров. Очень отзывчивый и внимательный персонал. Оформление магазина всегда притягивает взгляд.'],
+    ['Ульяна Тихонова','декабрь 2024','мастер-класс','Восхитительное, волшебное место! Ходила на мастер-класс по новогодней композиции. Очень довольна. Приветливые, чудесные мастерицы работают здесь! Всем советую посетить.'],
+    ['Анна Козлова','ноябрь 2024','букеты','Шикарный выбор букетов, и каждый из них — произведение искусства. Цветы были невероятно свежими и продержались очень долго. Консультанты помогли подобрать идеальный букет с учётом моих пожеланий.'],
+    ['Ирина Популова','декабрь 2024','с ребёнком','Посетили с ребёнком мастер-класс по новогодней ёлочке. Невероятная атмосфера, остались в огромном восторге!'],
+    ['Misha Kuryakin','март 2024','букеты','Девочки делают потрясающие букеты! Салон не первый раз показывает трепетное отношение к клиентам: доставка, рекомендации, прозрачные цены, быстрые ответы. 10 из 10!'],
+    ['Екатерина Горбунова','декабрь 2024','мастер-класс','Душевная атмосфера, индивидуальный подход, время провели замечательно, новогоднее настроение поднялось! Спасибо девочкам!'],
+    ['Анастасия Иванова','ноябрь 2024','букеты','Огромный выбор цветов и множество декора для дома. Флористы мгновенно поняли, что нужно, и создали прекрасный букет для важного события.'],
+    ['Марина Милюкова','октябрь 2024','постоянный гость','Моя любимая студия флористики с красивым оформлением, вежливыми флористами и интересными идеями.'],
+    ['Настя Рязанцева','декабрь 2024','букеты','Большой выбор цветов, а самое главное — божественный запах ели! Всем рекомендую за цветами в El park.'],
+    ['Евгения Середкина','декабрь 2024','букеты','Самый лучший цветочный магазин. Спасают в самые сложные моменты. Спасибо большое за вашу работу!'],
+    ['Юлия','декабрь 2024','букеты и МК','Волшебное место с отличным и отзывчивым коллективом. Воплотят любой каприз в реальность. Любимое место для букетов и мастер-классов.'],
+    ['Светлана Фокина','сентябрь 2026','букеты','Чудесные букеты, чудесные люди!'],
+    ['Семён К','ноябрь 2024','подарок','Классное место с классным интерьером. Отличный консультант помог собрать букет на подарок.']
+  ];
+  var AV=['#f0b65a','#a9c79a','#e59aac','#c9d6ee','#f3d9a6'];
+  var track=d.getElementById('track'), dotsEl=d.getElementById('dots'), prev=d.getElementById('prev'), next=d.getElementById('next');
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  track.innerHTML=R.map(function(r,i){
+    var ini=r[0].split(' ').map(function(w){return w[0]}).slice(0,2).join('');
+    return '<article class="rv" role="group" aria-roledescription="отзыв" aria-label="'+(i+1)+' из '+R.length+'">'+
+      '<div class="stars" aria-label="5 из 5">★★★★★</div><span class="rv__tag">'+esc(r[2])+'</span><p>'+esc(r[3])+'</p>'+
+      '<div class="rv__who"><span class="rv__ava" style="background:'+AV[i%AV.length]+'">'+esc(ini)+'</span><div><b>'+esc(r[0])+'</b><span>'+esc(r[1])+' · 2ГИС</span></div></div></article>';
+  }).join('');
+  var cards=[].slice.call(track.children);
+  function perView(){var w=cards[0].getBoundingClientRect().width;return Math.max(1,Math.round(track.clientWidth/(w+18)))}
+  function pages(){return Math.max(1,cards.length-perView()+1)}
+  function cur(){var w=cards[0].getBoundingClientRect().width+18;return Math.round(track.scrollLeft/w)}
+  function go(i){i=Math.max(0,Math.min(i,pages()-1));track.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:'smooth'})}
+  function buildDots(){
+    var n=pages();dotsEl.innerHTML='';
+    for(var i=0;i<n;i++){(function(i){var b=d.createElement('button');b.type='button';b.setAttribute('aria-label','Отзыв '+(i+1));b.addEventListener('click',function(){go(i);stopAuto()});dotsEl.appendChild(b)})(i)}
+    sync();
+  }
+  function sync(){
+    var c=cur(), n=pages();
+    [].forEach.call(dotsEl.children,function(b,i){b.setAttribute('aria-current',i===c?'true':'false')});
+    prev.disabled=c<=0; next.disabled=c>=n-1 && track.scrollLeft+track.clientWidth>=track.scrollWidth-4;
+  }
+  var raf;track.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(sync)},{passive:true});
+  prev.addEventListener('click',function(){go(cur()-1);stopAuto()});
+  next.addEventListener('click',function(){go(cur()+1);stopAuto()});
+  track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(cur()+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur()-1)}});
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(buildDots,150)});
+  buildDots();
+  /* gentle autoplay, stops after any interaction */
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var auto=null;
+  function stopAuto(){if(auto){clearInterval(auto);auto=null}}
+  if(!reduce){auto=setInterval(function(){var c=cur();go(c>=pages()-1?0:c+1)},5500)}
+  ['pointerdown','touchstart','wheel','focusin'].forEach(function(ev){track.addEventListener(ev,stopAuto,{passive:true})});
+
+  /* video */
+  var vid=d.getElementById('vid'), phone=d.getElementById('phone');
+  d.getElementById('vplay').addEventListener('click',function(){var p=vid.play();phone.classList.add('is-playing');if(p&&p.catch)p.catch(function(){phone.classList.remove('is-playing')})});
+  vid.addEventListener('play',function(){phone.classList.add('is-playing')});
+  vid.addEventListener('ended',function(){phone.classList.remove('is-playing')});
+
+  /* map: live map when hosted on the client's site, drawn map otherwise */
+  var host=location.hostname||'';
+  var sandboxed=/claude|anthropic|usercontent/i.test(host) || location.protocol==='file:';
+  if(!sandboxed){
+    var f=d.createElement('iframe');
+    f.src='https://yandex.ru/map-widget/v1/?text=%D0%90%D0%BD%D0%B3%D0%B0%D1%80%D1%81%D0%BA%2C%20212-%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%207&z=16';
+    f.title='Эль Парк на карте';f.loading='lazy';f.setAttribute('allowfullscreen','');
+    var m=d.getElementById('map');m.insertBefore(f,m.firstChild);
+    f.addEventListener('load',function(){var fb=m.querySelector('.map__fallback');if(fb)fb.hidden=true});
+  }
+
+  /* reveal on scroll (content stays visible if observer unavailable) */
+  var els=[].slice.call(d.querySelectorAll('.rv-in'));
+  if('IntersectionObserver' in window && !reduce){
+    var vh=window.innerHeight;
+    els.forEach(function(el){if(el.getBoundingClientRect().top>vh*0.92)el.classList.add('is-pending')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('is-pending');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){if(el.classList.contains('is-pending'))io.observe(el)});
+  }
+  d.getElementById('y').textContent=new Date().getFullYear();
+})();
+</script>
